@@ -1,0 +1,326 @@
+.blog-list {
+    width: 800px;
+    margin: 0 auto;
+    padding: 30px 0 10px 100px;
+}
+
+@media screen and (min-width: 1130px) {
+    .blog-list {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 1129px) and (min-width: 800px) {
+    .blog-list {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 799px) {
+    .blog-list {
+        width: 300px;
+        margin-left: 80px;
+    }
+}
+
+.blog-list a {
+    color: rgba(0,0,0,0.9);
+    text-align: left;
+    line-height: 50px;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    font-size: 16px;
+}
+.blog-list span {
+    font-size: 14px;
+    border-right: 1px solid #cccccc;
+    height: 20px;
+    display: inline-block;
+    width: 35px;
+    line-height: 21px;
+}
+/* 性能 */
+.blog-list span.xn {
+    color: #ffa060;
+}
+/* 安全 */
+.blog-list span.aq {
+    color: #1ec2b6;
+}
+/* 科普 */
+.blog-list span.kp {
+    color: #3aa3f4;
+}
+/* 杂谈 */
+.blog-list span.zt {
+    color: #c86f6f;
+}
+/* 应用 */
+.blog-list span.yy {
+    color: #6c54bb;
+}
+.blog-list a:hover {
+    text-decoration: none;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+    color: #fed136;
+}
+.blog-item a {
+    padding-left: 4px;
+}
+#article i {
+    color: #1a1a1a;
+    font-weight: bold;
+}
+.article {
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 100px 50px 100px;
+}
+
+.article p {
+    font-size: 16px;
+    color: #282828;
+    line-height: 40px;
+    list-style-type: disc;
+    margin-left: 19px;
+}
+
+.comment-wrap {
+    border-top: 2px solid #ffffff;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.comment li {
+    overflow: hidden;
+}
+.comment li .comment-item {
+    border-top: 1px solid #ebebeb;
+    color: #000000;
+    font-size: 16px;
+    position: relative;
+    padding-right: 94px;
+    list-style: none;
+}
+
+.comment-name {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #cccccc;
+}
+
+.comment-email {
+    font-size: 14px;
+    position: absolute;
+    left: 10px;
+    color: #aaaaaa;
+    bottom: 40px;
+}
+
+.comment-content {
+    padding: 50px 10px 80px 10px;
+}
+
+.comment-time {
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    color: rgba(0,0,0,0.5);
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 30px;
+}
+.blog-title {
+    width: 800px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 100px;
+    color: #000;
+    font-weight: bold;
+    line-height: 77px;
+}
+
+.write-comment {
+    border-top: 1px solid #ebebeb;
+    padding-top: 20px;
+    position: relative;
+}
+
+input {
+    margin: 15px;
+}
+
+textarea {
+    margin: 10px;
+    width: 672px;
+    border: 1px solid #ebebeb;
+}
+
+button {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 76px;
+    height: 32px;
+    background: #ffc510;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0 none;
+}
+.t-title {
+    margin: 0 0 27px -156px;
+    text-align: left;
+}
+.t-title h1 {
+    font-size: 24px;
+    color: rgba(0,0,0,0.9);
+    background: url(http://www.zhuyingda.com/static/img/deco-title.png) no-repeat left 51px;
+    padding-left: 14px;
+    font-weight: normal;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.b-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+body {
+    background: url(http://www.zhuyingda.com/static/img/bg-new.png) repeat-y center top;
+}
+
+@-webkit-keyframes article-in {
+    0% {
+        -webkit-transform: scale(.1, .1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes article-in {
+    0% {
+        -webkit-transform: scale(.1, .1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes article-in {
+    0% {
+        -webkit-transform: scale(.1, .1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@keyframes article-in {
+    0% {
+        -webkit-transform: scale(.1, .1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+.article-in {
+    -webkit-animation: article-in 1s ease-in-out 1;
+    -moz-animation: article-in 1s ease-in-out 1;
+    -o-animation: article-in 1s ease-in-out 1;
+    animation: article-in 1s ease-in-out 1;
+}
+
+@-webkit-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@-moz-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@-o-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+.comment li .comment-item {
+    -webkit-animation: blog-in 1s ease-in-out 1;
+    -moz-animation: blog-in 1s ease-in-out 1;
+    -o-animation: blog-in 1s ease-in-out 1;
+    animation: blog-in 1s ease-in-out 1;
+}
+em {
+    color: #ffc100;
+    font-weight: bold;
+    padding-right: 4px;
+}
+.declaration p {
+    color: #ffffff;
+}
+.article img {
+    width: 600px;
+    border: 1px solid #ebebeb;
+}
+.article .pic {
+    text-align: center;
+}
+#article a {
+    color: #ffc510;
+    text-decoration: underline;
+}
+.comment-null {
+    color: #cccccc;
+    padding: 10px;
+}
+.article-time {
+    color: rgba(0,0,0,0.45);
+    line-height: 20px;
+    text-align: left;
+    font-size: 12px;
+    margin-left: 19px;
+}
+.time-wrap {
+    margin-bottom: 20px;
+}
+.btn-home {
+    background: url(http://www.zhuyingda.com/static/img/btn-home.png) no-repeat left top;
+    width: 86px;
+    height: 100px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    left: 50px;
+    top: 150px;
+}

@@ -1,0 +1,663 @@
+body {
+    font-family: 'Microsoft Yahei', '微软雅黑', arial, '宋体', 'Hiragino Sans GB', Tahoma, Arial, Helvetica, STHeiti !important;
+    overflow: hidden;
+    height: 100%;
+    background: rgb(44,44,48);
+}
+
+.container {
+    position: relative;
+    top: 0;
+    display: none;
+    height: 4000px;
+    background: rgb(34,34,34);
+}
+
+.section {
+    overflow: hidden;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.section1 {
+    background: url(http://www.zhuyingda.com/static/img/sec1_m.jpg) no-repeat center center;
+}
+
+.section2 {
+    background: url(http://www.zhuyingda.com/static/img/sec2_m.jpg) no-repeat center center;
+}
+
+.section3 {
+    background: url(http://www.zhuyingda.com/static/img/sec3_m.jpg) no-repeat center center;
+}
+
+.section4 {
+    background: url(http://www.zhuyingda.com/static/img/sec4_m.jpg) no-repeat center center;
+}
+
+.inner-wrap {
+    position: relative;
+}
+
+.right-nav {
+    background: #e5b318;
+    position: fixed;
+    bottom: 18%;
+    right: 0;
+    height: 6%;
+    width: 12%;
+    z-index: 9999;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.right-nav.active {
+    width: 47%;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.nav-plus {
+    background: url(http://p0.qhimg.com/d/inn/92c9da09/ico-plus_13.png) no-repeat 0 0;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1rem;
+    margin-top: -1rem;
+}
+.right-nav.active .nav-plus {
+    display: none;
+}
+.right-nav .nav-git {
+    display: none;
+}
+.right-nav.active .nav-git {
+    background: url(http://p6.qhimg.com/d/inn/4f65cfaa/ico-git.png) no-repeat 0 -65px;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    margin-top: -1rem;
+    display: block;
+}
+.right-nav.active .nav-git:active {
+    background: url(http://p6.qhimg.com/d/inn/4f65cfaa/ico-git.png) no-repeat 0 0;
+    background-size: cover;
+}
+.right-nav .nav-mail {
+    display: none;
+}
+.right-nav.active .nav-mail {
+    background: url(http://p1.qhimg.com/d/inn/9f060bd7/ico-mail.png) no-repeat 0 -65px;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    display: block;
+}
+.right-nav.active .nav-mail:active {
+    background: url(http://p1.qhimg.com/d/inn/9f060bd7/ico-mail.png) no-repeat 0 0;
+    background-size: cover;
+}
+.right-nav .nav-message {
+    display: none;
+}
+.right-nav.active .nav-message {
+    background: url(http://p8.qhimg.com/d/inn/25199d8c/ico-message.png) no-repeat 0 -65px;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    margin-top: -1rem;
+    display: block;
+}
+.right-nav.active .nav-message:active {
+    background: url(http://p8.qhimg.com/d/inn/25199d8c/ico-message.png) no-repeat 0 0;
+    background-size: cover;
+}
+
+.contact-git {
+    background: url(http://p8.qhimg.com/t011093bf31b3934fe5.png) no-repeat -34px 0px;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 13px auto 0;
+}
+
+
+.contact-mail {
+    background: url(http://p5.qhimg.com/t016d278cf749b01a06.png) no-repeat -34px 0px;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 13px auto 0;
+}
+
+.contact-more {
+    background: url(http://p7.qhimg.com/t0175b74d3be1271e94.png) no-repeat -34px 0px;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 13px auto 0;
+}
+
+.left-nav {
+    width: 34px;
+    height: 200px;
+    position: fixed;
+    left: 40px;
+    top: 50%;
+}
+
+.arrow-up {
+    background: url(http://p7.qhimg.com/t017392c5fb4c1b9b0f.png) no-repeat left top;
+    width: 20px;
+    height: 12px;
+    margin: 0 auto;
+}
+
+.arrow-down {
+    background: url(http://p3.qhimg.com/t010b3b2b7c684e2d7d.png) no-repeat left top;
+    width: 20px;
+    height: 12px;
+    margin: 14px auto 0;
+}
+
+.radio {
+    background: url(http://p4.qhimg.com/t01e9d8c359fe5e7b4c.png) no-repeat left top;
+    margin: 14px auto 0;
+    width: 14px;
+    height: 14px;
+}
+
+.radio.cur {
+    background: url(http://p3.qhimg.com/t014c3b8156ac65525f.png) no-repeat left top;
+    margin: 14px auto 0;
+    width: 34px;
+    height: 60px;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.title-zh {
+    width: 18rem;
+    height: 5rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -9rem;
+    background: #ffc510;
+    color: #ffffff;
+    top: 100px;
+    opacity: 0;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 5rem;
+    z-index: 2;
+}
+
+.title-en {
+    border: 4px solid #ffc510;
+    width: 22rem;
+    height: 6rem;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    opacity: 0;
+    margin-left: -11rem;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 8rem;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.mouse {
+    background: url(http://p3.qhimg.com/d/inn/07c15e32/mouse.png) no-repeat left top;
+    width: 24px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    bottom: 47px;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    50% {
+        -webkit-transform: translate(0, 20px);
+        -moz-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+}
+.slide {
+    background: url(http://p1.qhimg.com/d/inn/b28e69f6/arrow.png) no-repeat left top;
+    background-size: cover;
+    width: 32px;
+    height: 66px;
+    position: absolute;
+    left: 50%;
+    margin-left: -16px;
+    bottom: 20px;
+    -webkit-animation: slide 1.5s ease-in-out infinite;
+}
+.i-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.rect-center {
+    position: absolute;
+    background: url(http://p8.qhimg.com/d/inn/36ef657a/rect_center.png) no-repeat left top;
+    top: 50%;
+    left: 50%;
+    width: 523px;
+    height: 523px;
+    margin-left: -262px;
+    margin-top: -262px;
+    z-index: 90;
+}
+.rect-center-glass {
+    position: absolute;
+    background: url(http://p6.qhimg.com/d/inn/5308da4b/rect_shadow.png) no-repeat left top;
+    top: 50%;
+    left: 50%;
+    margin-left: -290px;
+    margin-top: -290px;
+    width: 581px;
+    height: 581px;
+}
+.rect-left {
+    position: absolute;
+    background: url(http://p2.qhimg.com/d/inn/3d522a94/rect_glass.png) no-repeat left top;
+    top: 50%;
+    left: 50%;
+    margin-left: -235px;
+    margin-top: -235px;
+    width: 469px;
+    height: 469px;
+}
+.rect-right {
+    position: absolute;
+    background: url(http://p2.qhimg.com/d/inn/3d522a94/rect_glass.png) no-repeat left top;
+    top: 50%;
+    left: 50%;
+    margin-left: -235px;
+    margin-top: -235px;
+    width: 469px;
+    height: 469px;
+}
+.sec2-content {
+    width: 280px;
+    margin: 90px auto 0;
+    position: relative;
+}
+.sec2-content h2 {
+    font-size: 28px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    width: 126px;
+    margin: 0 auto;
+    font-weight: 100;
+}
+.sec2-content h3 {
+    text-align: center;
+    color: #554724;
+    font-size: 16px;
+    margin-top: 4px;
+    font-weight: 100;
+}
+.github-logo {
+    background: url(http://p1.qhimg.com/d/inn/10122443/github.png) no-repeat left top;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: 40px;
+    top: 264px;
+}
+.sec2-content a {
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin: 206px auto 0;
+    display: block;
+    background: url(http://p2.qhimg.com/d/inn/6d2987cc/ico.png) no-repeat 209px center;
+}
+.l1-t1 {
+    position: absolute;
+    left: 10px;
+    top: 75px;
+    color: #272727;
+    font-size: 32px;
+}
+.l1-t2 {
+    position: absolute;
+    left: 36px;
+    top: 81px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.l1-t3 {
+    position: absolute;
+    left: 37px;
+    top: 94px;
+    color: #272727;
+    font-size: 12px;
+}
+.l1-t4 {
+    position: absolute;
+    left: 120px;
+    top: 85px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 181px;
+    text-align: center;
+}
+.l2-t1 {
+    position: absolute;
+    left: 10px;
+    top: 135px;
+    color: #272727;
+    font-size: 32px;
+}
+.l2-t2 {
+    position: absolute;
+    left: 36px;
+    top: 141px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.l2-t3 {
+    position: absolute;
+    left: 36px;
+    top: 155px;
+    color: #272727;
+    font-size: 12px;
+}
+.l2-t4 {
+    position: absolute;
+    left: 120px;
+    top: 145px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 181px;
+    text-align: center;
+}
+.l3-t1 {
+    position: absolute;
+    left: 10px;
+    top: 195px;
+    color: #272727;
+    font-size: 32px;
+}
+.l3-t2 {
+    position: absolute;
+    left: 36px;
+    top: 200px;
+    color: #ffffff;
+    font-size: 12px;
+}
+.l3-t3 {
+    position: absolute;
+    left: 36px;
+    top: 212px;
+    color: #272727;
+    font-size: 14px;
+}
+.l3-t4 {
+    position: absolute;
+    left: 120px;
+    top: 205px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 181px;
+    text-align: center;
+}
+.e-wrap {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.rect1 {
+    background: url(http://p6.qhimg.com/d/inn/bd28a3e8/rect.png) no-repeat left top;
+    width: 195px;
+    height: 195px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -98px;
+    z-index: 90;
+    cursor: pointer;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.rect1-left {
+    background: url(http://p7.qhimg.com/d/inn/c7d28d1d/rect_t.png) no-repeat left top;
+    width: 217px;
+    height: 217px;
+    position: absolute;
+    left: 50%;
+    margin-left: -109px;
+}
+.rect1-right {
+    background: url(http://p7.qhimg.com/d/inn/c7d28d1d/rect_t.png) no-repeat left top;
+    width: 217px;
+    height: 217px;
+    position: absolute;
+    left: 50%;
+    margin-left: -109px;
+}
+.rect2 {
+    background: url(http://p6.qhimg.com/d/inn/bd28a3e8/rect.png) no-repeat left top;
+    width: 195px;
+    height: 195px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -98px;
+    z-index: 90;
+    cursor: pointer;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.rect2-left {
+    background: url(http://p7.qhimg.com/d/inn/c7d28d1d/rect_t.png) no-repeat left top;
+    width: 217px;
+    height: 217px;
+    position: absolute;
+    left: 50%;
+    margin-left: -109px;
+}
+.rect2-right {
+    background: url(http://p7.qhimg.com/d/inn/c7d28d1d/rect_t.png) no-repeat left top;
+    width: 217px;
+    height: 217px;
+    position: absolute;
+    left: 50%;
+    margin-left: -109px;
+}
+.rect1:active {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.rect2:active {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.rect1 h2 {
+    font-size: 24px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    width: 108px;
+    margin: 61px auto 0;
+    cursor: pointer;
+    font-weight: 100;
+}
+.rect1 h3 {
+    text-align: center;
+    color: #272727;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 100;
+}
+.rect2 h2 {
+    font-size: 24px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    width: 108px;
+    margin: 61px auto 0;
+    cursor: pointer;
+    font-weight: 100;
+}
+.rect2 h3 {
+    text-align: center;
+    color: #272727;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.t-wrap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#name {
+    position: absolute;
+    width: 420px;
+    left: 28px;
+    top: 255px;
+    height: 12px;
+    padding: 20px;
+}
+#email {
+    position: absolute;
+    width: 420px;
+    left: 28px;
+    top: 335px;
+    height: 12px;
+    padding: 20px;
+}
+#company {
+    position: absolute;
+    width: 420px;
+    left: 28px;
+    top: 415px;
+    height: 12px;
+    padding: 20px;
+}
+#message {
+    position: absolute;
+    width: 420px;
+    right: 28px;
+    top: 255px;
+    height: 172px;
+    padding: 20px;
+}
+.icp {
+    font-size: 12px;
+    color: #7f7f7f;
+    position: absolute;
+    left: 50%;
+    width: 120px;
+    margin-left: -60px;
+    bottom: 45px;
+}
+
+.t-wrap h2 {
+    font-size: 40px;
+    color: #ffc510;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #ffffff;
+    text-align: center;
+    width: 180px;
+    margin: 25px auto 0;
+    font-weight: 100;
+}
+.t-wrap h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+
+.section4 .t-wrap p {
+    font-size: 1rem;
+    color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.section4 .t-wrap a {
+    font-size: 1rem;
+    color: #ffc510;
+}

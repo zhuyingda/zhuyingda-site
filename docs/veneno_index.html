@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="referrer" content="always">
+    <meta name="description" content="veneno,渗透,web渗透,web安全,security,web扫描工具,自动化测试,npm包,javascript,Node.js">
+    <meta name="keywords" content="veneno是一个基于Node.js编写的web安全测试工具，目标实现web渗透全自动化测试，根据网站前台暴露出的代码进行扫描分析，查找出其中所包含的XSS，CSRF和sql注入等安全漏洞。">
+    <link rel="stylesheet" href="http://cdn.zhuyingda.com/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <style>
+        .t-title{
+            font-size: 20px;
+            opacity: 0.6;
+            color: #ffffff;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        body{
+            background: #222222;
+        }
+        li {
+            color: #cccccc;
+        }
+        .list a {
+            color: #cccccc;
+        }
+        .important li {
+            color: #ffffff;
+        }
+        .wrapper {
+            height: inherit;
+        }
+        #cnzz_stat_icon_1257530116 {
+            display: none;
+        }
+    </style>
+    <title>veneno-web渗透工具</title>
+    <script type="text/javascript" src="http://s.union.360.cn/2550.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="t-title">
+        <h1>veneno</h1>
+    </div>
+    <div class="list">
+        <h2>对比目前网上开源的一些web渗透工具，veneno有什么优势：</h2>
+        <ul class="sec">
+            <li>市面上绝大多数web渗透工具，都是采用python或其他脚本语言编写，veneno采用Node.js，性能具有一定优势</li>
+            <li>目前绝大多数web渗透工具都不能做到一键自动扫描，开发veneno的目标致力于实现web渗透的完全自动化</li>
+            <li>采用npm包管理方式，安装方便，操作简单，目前npmjs.com上面的veneno包就是这个项目</li>
+            <li>开源工具很多代码已过时，并且很难根据目前时下较为流行的新漏洞进行扩展</li>
+        </ul>
+        <h2 id="prj">项目背景介绍：</h2>
+        <ul class="sec">
+            <li>目前项目的全部代码均在github开源，欢迎大家fork和issue</li>
+            <li>关于名称：veneno这个名字源自意大利语，意思是毒药</li>
+            <li>关于Node环境：建议使用4.X版本运行这个项目相关的代码，因为使用了大量ES6的语法，未来很可能引入ES7的async和await</li>
+            <li>本项目致力于开发出一套全自动化的web安全扫描流程，并提供一套可扩展的机制，借助开源社区的力量不断提高这套渗透工具的扫描能力</li>
+            <li>XSS：web安全领域首当其冲的一大威胁，提供一套自动扫描可注入点的自动化工具以及一个可扩展的XSS字典，方便大家对工具进行自行定制化</li>
+        </ul>
+        <h2 id="tech">技术背景介绍</h2>
+        <ul class="sec">
+            <li><a target="_blank" href="http://www.zhihu.com/question/21606800">关于web安全基础知识</a></li>
+            <li><a target="_blank" href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC">什么是XSS(跨站脚本攻击)？</a></li>
+            <li><a target="_blank" href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0">什么是CSRF(伪造网络请求攻击)？</a></li>
+            <li><a target="_blank" href="http://baike.baidu.com/view/3896.htm">什么是sql注入攻击？</a></li>
+        </ul>
+        <h2 id="now">目前进度：</h2>
+        <ul class="sec important">
+            <li>src目录下的spider.js，实现了一个单域名下的垂直深度爬虫，可以抓取到所有xhr接口的名称。具体测试用例可以直接运行test目录下的spider单测。</li>
+            <li>src目录下的xss.js，是一个xss渗透攻击器，这个模块功能已开发完成，传入参数是要测试的各个rest接口和接口参数，以及预期被xss的所有页面url，运行后会返回渗透测试的结果。请直接编辑test目录下的xss，运行后可在命令行中观察结果。</li>
+            <li>从src目录下的一个名为dictionary的文件中读取xss向量，对每次找到的疑似XSS注入点进行注入攻击</li>
+            <li>对于csrf/xsrf类的攻击，由于各个网站防csrf的手段差别很大，暂时没有想好以怎样的方式封装发包器。test目录下的一个csrf测试用例，实际上是刷npm官网的命名接口，并取得目前npm所有可用的名字。</li>
+            <li>此外，目前该项目已经引入PhantomJs，预计将会通过此技术实现一个超级爬虫，模拟一个真实的浏览器用户行为，自动化找到一个网站所有在前台暴露出来的rest接口，结合xss模块，可实现对一个网站的全自动化xss测试。</li>
+            <li>据了解，目前web安全领域，对于xss漏洞的全自动化测试工具，开源出来的比较罕见。</li>
+        </ul>
+        <h2 id="plan">目前计划：</h2>
+        <ul class="sec important">
+            <li>秉承Unix哲学，项目把“对一个web站点进行全自动化黑盒扫描”这样一个复杂的任务，划分为若干个功能模块，便于开发和维护。</li>
+            <li>模块主要包括：前端爬虫，盲扫迭代器，xss分析器，csrf发包器。</li>
+            <li>前端爬虫：利用PhantomJs模拟浏览器加载页面和用户行为，获取到一个网站暴露在前台的全部RestApi。</li>
+            <li>盲扫迭代器：以迭代方式暴力查找一个网站的所有http接口，为提高性能，将其中涉及到的核心部分用C++Addon的形式复写。</li>
+            <li>XSS分析器：通过前端爬虫或盲扫迭代器扫描得到的接口，自动化进行xss渗透，获得有可能存在xss漏洞的接口和漏洞页面。</li>
+            <li>CSRF发包器：根据自行设置的请求接口、请求参数和请求频率，自动化执行任务，在请求中伪造http头信息，模仿真实的用户请求。</li>
+        </ul>
+        <h2 id="link">项目代码：</h2>
+        <ul class="sec">
+            <li>
+                <a target="_blank" href="https://github.com/zhuyingda/veneno">git仓库地址</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.npmjs.com/package/veneno">npm包地址</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="nav">
+    <a href="/" class="back">返回首页</a>
+    <a href="/docs.html" class="back">返回上一级</a>
+    <a href="#prj">项目背景</a>
+    <a href="#tech">技术背景</a>
+    <a href="#now">目前进度</a>
+    <a href="#plan">目前计划</a>
+    <a href="#link">传送门</a>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://s4.qhimg.com/!8a028437/jquery.transit.js"></script>
+<script>
+    (function () {
+        resetH();
+        $(window).resize(resetH);
+        function resetH(){
+            var h =  $(window).height();
+            $('.nav').css({height:h});
+        }
+    })()
+</script>
+<script>
+    (function () {
+        var destTop = $('body').height() - $(window).height();
+        var top = 0;
+        var it = setInterval(function () {
+            if (top == destTop) {
+                clearInterval(it);
+
+            }
+            top += 10;
+            window.scrollTo(0, top);
+        }, 12);
+        setTimeout(function () {
+            clearInterval(it);
+        }, 3000);
+    })()
+</script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257530116'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257530116' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

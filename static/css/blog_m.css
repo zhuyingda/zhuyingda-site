@@ -1,0 +1,262 @@
+body {
+    background: #fafafa;
+}
+.wrapper{
+    background: #fafafa;
+}
+.blog-list {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.blog-list a {
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+    display: block;
+    text-align: left;
+    line-height: 50px;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.blog-list a:active {
+    text-decoration: none;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -o-transition: all ease .2s;
+    transition: all ease .2s;
+    color: #fed136;
+}
+
+.article {
+    width: 90%;
+    margin: 0 auto;
+    padding: .5rem .5rem 1rem .5rem;
+}
+
+.article p {
+    font-size: 16px;
+    color: #4c4c4c;
+    line-height: 2rem;
+}
+
+.comment-wrap {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.comment li {
+    overflow: hidden;
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 40px;
+}
+.comment li .comment-item {
+    border-top: 1px solid #e6e6e6;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative;
+    list-style: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.comment-null {
+    border-top: 1px dashed #e6e6e6;
+    color: rgba(0,0,0,0.5);
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.comment-content {
+    color: #000000;
+    line-height: 30px;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.comment-time {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgba(0,0,0,0.5);
+    text-align: right;
+    line-height: 20px;
+}
+
+.write-comment {
+    border-top: 1px solid #e6e6e6;
+    height: 8.5%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    z-index: 9999;
+}
+
+textarea {
+    width: 77.5%;
+    line-height: 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    position: absolute;
+    left: 2.5%;
+    top: 8px;
+    height: 66%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #ffffff;
+    outline: 0 none;
+}
+
+button {
+    width: 15%;
+    height: 70%;
+    background: #ffc510;
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    position: absolute;
+    right: 2.5%;
+    top: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.t-title {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.b-title {
+    font-size: 18px;
+    opacity: 0.6;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@-webkit-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@-moz-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@-o-keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+
+@keyframes blog-in {
+    0% {
+        -webkit-transform: translate(0,-200px);
+    }
+    100% {
+        -webkit-transform: translate(0,0);
+    }
+}
+.comment li .comment-item.slide-down {
+    -webkit-animation: blog-in 1s ease-in-out 1;
+    -moz-animation: blog-in 1s ease-in-out 1;
+    -o-animation: blog-in 1s ease-in-out 1;
+    animation: blog-in 1s ease-in-out 1;
+}
+em {
+    color: #ffc510;
+    font-weight: bold;
+}
+.declaration p {
+    color: #4c4c4c;
+}
+.article img {
+    width: 90%;
+}
+#article a {
+    color: #ffc510;
+    text-decoration: underline;
+}
+#article a:link {
+    color: #ffc510;
+}
+.article .pic {
+    text-align: center;
+}
+.t-title h1 {
+    margin-left: 5%;
+    font-size: 1.6rem;
+    background: url(http://www.zhuyingda.com/static/img/ico-title.png) no-repeat left 20px;
+    height: 44px;
+    text-align: left;
+    padding-left: 1rem;
+    color: #000000;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace,Tahoma, Arial, Helvetica, STHeiti !important;
+}
+@media (max-width: 330px) {
+    .t-title h1 {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 380px) and (min-width: 331px) {
+    .t-title h1 {
+        font-size: 1.4rem;
+    }
+}
+#article i {
+    color: #1a1a1a;
+    font-weight: bold;
+}
+.article-time {
+    color: rgba(0,0,0,0.45);
+    line-height: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+.time-wrap {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.back2top {
+    background: url(http://www.zhuyingda.com/static/img/to-top.png) no-repeat 0 0;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10.2%;
+    right: 2.6%;
+    z-index: 9999;
+}
+.favorite {
+    background: url(http://www.zhuyingda.com/static/img/favorite.png) no-repeat 0 0;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 22%;
+    right: 2.6%;
+    display: block;
+    z-index: 9999;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "thinkjs-application",
+  "description": "application created by thinkjs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node www/development.js"
+  },
+  "dependencies": {
+    "babel-loader": "^6.2.1",
+    "chalk": "^1.1.1",
+    "detector": "^2.4.2",
+    "gulp": "^3.9.0",
+    "gulp-watch": "^4.3.5",
+    "jsx-loader": "^0.13.2",
+    "mongodb": "^2.0.48",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "thinkjs": "2.0.x",
+    "webpack": "^1.12.9",
+    "webpack-watcher": "^0.2.3"
+  },
+  "devDependencies": {
+    "kerberos": "0.0.18",
+    "mongodb-core": "^1.2.32"
+  }
+}

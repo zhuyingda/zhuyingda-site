@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="zippo-ui是一个前端UI组件库,作为一个jquery插件,其体积小,功能完整,并且在兼容ie6的基础上,对高级浏览器进行了css3方面的优化。">
+    <meta name="keywords" content="zippo-ui,前端UI组件,jquery插件,前端组件,jquery,javascript,javascript函数库,javascript,library,jquery插件,web开发,软件开发，html5，前端开发，前端组件，web前端。">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="referrer" content="always">
+    <link rel="stylesheet" href="http://cdn.zhuyingda.com/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/common_m.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <style>
+        body{
+            background: #222222;
+        }
+        #cnzz_stat_icon_1257530116 {
+            display: none;
+        }
+    </style>
+    <title>zippo组件库</title>
+    <script type="text/javascript" src="http://s.union.360.cn/2550.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="t-title">
+        <h1>zippo-ui</h1>
+    </div>
+    <div class="list">
+        <h2>开发这个组件库的初衷主要是：</h2>
+        <ul class="sec">
+            <li>将前端常用UI组件的交互逻辑抽象出来进行封装，提高开发效率</li>
+            <li>将ie环境下的bug在组件层面解决掉，避免重复的修bug</li>
+            <li>支持npm包管理方式在commonJs环境下开发，支持webpack、browserify等打包工具</li>
+        </ul>
+        <h2>主要特点：</h2>
+        <ul class="sec">
+            <li>轻量级：没有引入任何其他类库，代码体积小</li>
+            <li>易使用：api接口尽可能简单，降低学习成本和维护成本</li>
+            <li>基于jquery，主要解决国内PC端页面，向ie6兼容</li>
+            <li>提供umd版本，并且拥有整合版以及每一个子功能模块分别对应的打包js</li>
+            <li>支持在commonJs的前端代码预编译环境，如webpack、browserify</li>
+            <li>同时逐渐支持H5,ES6等新规范，同样为移动端页面提供相应优化</li>
+        </ul>
+        <h2 id="install">安装方式</h2>
+        <div class="sec">
+            <p>1.外链js的引入方式</p>
+            <i>将下列代码粘贴到你的网页中，放在jquery之后：</i>
+            <span>&lt;script src="http://www.zhuyingda.com/static/js/zippo.release.js"&gt;&lt;/script&gt;</span>
+            <p>2.commonJs环境下引入方式</p>
+            <i>首先安装zippo-ui：</i>
+            <span>npm install --save-dev zippo-ui</span>
+            <i>然后在你的代码中引入zippo-ui，并按照下面的api文档调用各组件的api即可。建议以如下方式引入，以跟api上面的命名保持一致：</i>
+            <span>var zippo = require("zippo-ui");</span>
+        </div>
+        <h2 id="mask">弹层组件(mask)：</h2>
+        <div class="sec">
+            <p>显示弹层：</p>
+            <span>var m = zippo.mask.showMask("&lt;div&gt;这里是弹层内容&lt;/div&gt;",{animation:'fade'});</span>
+            <p>关闭弹层：</p>
+            <span>m.close();</span>
+            <p>抖动弹层：</p>
+            <span>m.shake();</span>
+        </div>
+        <h2 id="pager">分页组件(pager)：</h2>
+        <div class="sec">
+            <p>分页组件初始化：</p>
+            <span>zippo.pager.init({<br>&nbsp&nbsp&nbsp&nbsp$el:&nbsp$('#pager'),<br>&nbsp&nbsp&nbsp&nbspbtnInPage:&nbsp10,<br>&nbsp&nbsp&nbsp&nbspitemInPage:&nbsp14,<br>&nbsp&nbsp&nbsp&nbsponTurn:&nbspfunction&nbsp(p)&nbsp{<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log(p);<br>&nbsp&nbsp&nbsp&nbsp}<br>});</span>
+            <p>设置数据条数：</p>
+            <span>zippo.pager.setTotal(70);</span>
+        </div>
+        <h2 id="slider">轮播图(slider)：</h2>
+        <div class="sec">
+            <p>组件初始化：</p>
+            <span>var c = zippo.carousel.init({<br>&nbsp&nbsp&nbsp&nbsp$el: $('#carousel'),<br>&nbsp&nbsp&nbsp&nbspwidth: 200,<br>&nbsp&nbsp&nbsp&nbspitemWidth: 100,<br>&nbsp&nbsp&nbsp&nbspheight: 100,<br>&nbsp&nbsp&nbsp&nbsp res:<br>&nbsp&nbsp&nbsp&nbsp[<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'&lt;p&gt;123&lt;/p&gt;',<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp '&lt;p&gt;123&lt;/p&gt;',<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'&lt;p&gt;123&lt;/p&gt;',<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'&lt;p&gt;123&lt;/p&gt;'<br>&nbsp&nbsp&nbsp&nbsp]<br>}); </span>
+            <p>向左滑动：</p>
+            <span>c.turnLeft();</span>
+            <p>向右滑动：</p>
+            <span>c.turnRight();</span>
+        </div>
+        <h2 id="link">传送门：</h2>
+        <ul class="sec">
+            <li>
+                <a href="https://github.com/zhuyingda/zippo-ui">git仓库地址</a>
+            </li>
+            <li>
+                <a href="https://www.npmjs.com/package/zippo-ui">npm包地址</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257530116'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257530116' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>
